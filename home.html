@@ -39,21 +39,22 @@
         `
     }else{
         
-      alldata.map((item, index)=>{
-        datacontainer.innerHTML += `
+        alldata.map((item, index) => {
+    datacontainer.innerHTML += `
         <div class="col-md-4 mb-3">
-             <div class="p-3 shadow-sm h-100" style="background:${item.color}">
-                    <div class="d-flex gap-1 justify-content-between">
-                        <i class="fa-regular fa-note-sticky fs-4"></i>
-                        <p class="mb-0 fs-6"><i class="fa-solid fa-calendar-days"></i> ${new Date(item.date).toLocaleDateString()} | <i class="fa-solid fa-clock"></i> ${new Date(item.date).toLocaleTimeString()}</p>
-                    </div>
-                    
-                    <hr>
-                    <h3 class="fs-4">${item.notesTitle}</h3>
-                    <p clas="fs-6">${item.mainNotes}</p>
-                </div></div>
-        `
-      })
+            <div class="p-3 shadow-sm h-100" style="background:${item.color}">
+                <div class="d-flex gap-1 justify-content-between">
+                    <i class="fa-regular fa-note-sticky fs-4"></i>
+                    <p class="mb-0 fs-6"><i class="fa-solid fa-calendar-days"></i> ${new Date(item.date).toLocaleDateString()} | <i class="fa-solid fa-clock"></i> ${new Date(item.date).toLocaleTimeString()}</p>
+                </div>
+                <hr>
+                <h3 class="fs-4" style="font-size:${item.fontSize}">${item.notesTitle}</h3>
+                <p class="fs-6" style="font-size:${item.fontSize}">${item.mainNotes}</p>
+            </div>
+        </div>
+    `;
+});
+
     }
    </script>
 </body>
